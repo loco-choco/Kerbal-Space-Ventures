@@ -1,0 +1,12 @@
+{
+  "$schema": "https://raw.githubusercontent.com/ow-mods/owml/master/schemas/manifest_schema.json",
+  "filename": "KSPShips.dll",
+  "author": "Locochoco",
+  "name": "KSPShips",
+  "uniqueName": "Locochoco.KSPShips",
+  "version": "0.1.0",
+  "owmlVersion": "2.7.3",
+  "dependencies": [
+  "Locochoco.SlateShipyard"
+  ]
+}

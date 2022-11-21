@@ -1,0 +1,10 @@
+ManifestFileVersion: 0
+CRC: 489571381
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: parts
+      Dependencies: {}
+    Info_1:
+      Name: emptycraft
+      Dependencies: {}

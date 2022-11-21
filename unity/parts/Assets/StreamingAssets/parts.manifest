@@ -1,0 +1,49 @@
+ManifestFileVersion: 0
+CRC: 474244093
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: 2ab8ebae49fe258540314db92489f3f2
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: d3262ec3e9c6499d686f08c5d588ca58
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 1426065454, guid: ac16fb802a52e8c4ca9175c793086bfa, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 84a628306bd4f894699745aa93f8df61, type: 3}
+- Class: 114
+  Script: {fileID: -751996315, guid: ac16fb802a52e8c4ca9175c793086bfa, type: 3}
+- Class: 114
+  Script: {fileID: -589518953, guid: ac16fb802a52e8c4ca9175c793086bfa, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 848bf8872d7527e4dba2266f0b1d7843, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 136
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers: []
+Assets:
+- Assets/parts/mk1pod.prefab
+- Assets/parts/stackDecoupler.prefab
+- Assets/parts/solidBooster.sm.prefab
+Dependencies: []

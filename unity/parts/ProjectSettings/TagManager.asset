@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - PlayerSafetyCollider
+  - Sun
+  - ShipInterior
+  - HelmetUVPass
+  - UNUSED
+  - AdvancedDetector
+  - Primitive
+  - IgnoreSun
+  - AdvancedEffectVolume
+  - BasicEffectVolume
+  - ProxyPrimitive
+  - ReferenceFrameVolume
+  - BasicDetector
+  - Interactible
+  - VisibleToProbe
+  - HeadsUpDisplay
+  - CloseRangeRFVolume
+  - ProxyPrimitive2
+  - PhysicalDetector
+  - VisibleToPlayer
+  - DreamSimulation
+  - Shybox
+  - IgnoreOrbRaycast
+  - Flashback
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
