@@ -27,6 +27,7 @@ namespace KSPShips
 
             MainCraftControl mainCraftControl = craftPrefab.GetComponent<MainCraftControl>();
 
+            List<BaseKSPPart> parts = new();
             foreach (var node in baseNode.Nodes)
             {
                 if (node.Type != NodeType.Part)
@@ -67,7 +68,12 @@ namespace KSPShips
                 }
                 kspPart.InitialLinks = initialLinks;
                 kspPart.Stage = stage;
+
+                parts.Add(kspPart);
             }
+
+            mainCraftControl.ForceSetCenterOfMass(parts.ToArray());
+
             return craftPrefab;
         }
         static NumberFormatInfo nfi = new CultureInfo("en-US", false).NumberFormat;

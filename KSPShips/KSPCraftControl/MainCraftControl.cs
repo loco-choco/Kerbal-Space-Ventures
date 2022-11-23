@@ -18,7 +18,30 @@ namespace KSPShips.KSPCraftControl
             if (!hasInitialized)
                 Init();
         }
-        public void Init() 
+        public void ForceSetCenterOfMass(BaseKSPPart[] parts)
+        {
+            Vector3 centerOfMass = Vector3.zero;
+            float mass = 0f;
+            for (int i = 0; i < parts.Length; i++)
+            {
+                var part = parts[i];
+
+                //Center Of Mass
+                mass += part.Mass;
+                Vector3 partCenterOfMass = part.transform.TransformPoint(part.LocalCenterOfMass);
+
+                centerOfMass += partCenterOfMass * part.Mass;
+            }
+            centerOfMass /= mass;
+
+            Vector3 localCenterOfMass = transform.InverseTransformPoint(centerOfMass);
+
+            for (int i = 0; i < parts.Length; i++) //Move all the parts down or up instead of having the center of the parent not be the center of mass
+            {
+                parts[i].transform.localPosition -= localCenterOfMass;
+            }
+        }
+        public void Init()
         {
             hasInitialized = true;
 
@@ -28,7 +51,7 @@ namespace KSPShips.KSPCraftControl
 
             Vector3 centerOfMass = rigidbody.GetCenterOfMass() * rigidbody.GetMass();
             float mass = rigidbody.GetMass();
-            for(int i = 0; i < foundParts.Length; i++) 
+            for (int i = 0; i < foundParts.Length; i++)
             {
                 var part = foundParts[i];
                 //Stages
@@ -61,9 +84,9 @@ namespace KSPShips.KSPCraftControl
             foreach (var partPair in parts)
             {
                 var part = partPair.Value;
-                for(int i =0; i< part.InitialLinks.Length; i++) 
+                for (int i = 0; i < part.InitialLinks.Length; i++)
                 {
-                    if(parts.TryGetValue(part.InitialLinks[i],out var linkedPart))
+                    if (parts.TryGetValue(part.InitialLinks[i], out var linkedPart))
                         linkedPart.transform.parent = part.transform;
                 }
             }
